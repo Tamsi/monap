@@ -1,15 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import React, {Component} from 'react';
+import { StyleSheet, Text, View, Image, Picker, ScrollView, TouchableHighlight } from 'react-native';
+//import ListVue from "./components/ListVue";
 
-export default class App extends React.Component {
+export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component {
+  _onPressButton()
+  {
+    console.log("OK");
+  }
   render() {
-    return (
-      <View style={styles.container}>
-        <Image source={require('./back.jpg')} style={{width: 50, height: 50}}/>
-        <Text>I made the wr of the conn</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      return (
+        <View style={styles.container}>
+          <Text style={styles.title}>Qu'est ce qu'on mange ?</Text>
+          <Text>J'ai la flemme !</Text>
+        </View>
     );
   }
 }
@@ -21,4 +24,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    fontSize: 30,
+    color: '#f44',
+  }
 });
